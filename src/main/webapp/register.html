@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Blood Bank</title>
+    <link rel="stylesheet" href="/sample1/login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h2>Create Account</h2>
+
+        <form action="RegisterUser" method="POST">
+
+            <label for="username">Username:</label>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   required>
+
+            <label for="password">Password:</label>
+            <input type="password"
+                   id="password"
+                   name="password"
+                   required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password"
+                   id="confirmPassword"
+                   name="confirmPassword"
+                   required>
+
+            <input type="submit" value="Register">
+
+        </form>
+
+        <div class="register-section">
+            <p>Already have an account?</p>
+
+            <a href="index.html" class="register-button">
+                Back to Login
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+    background-color: red;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+button.enabled {
+    background-color: #0a91f1 !important;
+    color: #fff !important;
+    cursor: pointer;
+}

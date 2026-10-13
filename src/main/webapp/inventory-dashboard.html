@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Blood Bank Inventory</title>
+
+    <link
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            background-color: red;
+            min-height: 100vh;
+        }
+
+        .dashboard-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .dashboard-card {
+            border-radius: 15px;
+        }
+
+        .dashboard-title {
+            font-weight: bold;
+        }
+
+        .dashboard-btn {
+            width: 100%;
+            margin-top: 12px;
+            padding: 12px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="dashboard-container">
+
+        <div class="card shadow p-4 dashboard-card">
+
+            <h2 class="text-center dashboard-title mb-4">
+                Blood Bank Inventory
+            </h2>
+
+            <p class="text-center">
+                Select an option
+            </p>
+
+            <!-- DONORS + ISSUE BLOOD + HISTORY -->
+            <a
+                href="BloodDonars"
+                class="btn btn-success dashboard-btn">
+
+                Donors & Blood Issue History
+
+            </a>
+
+            <!-- DONOR / RECEIVER CONFIRMATION -->
+            <a
+                href="blood-confirmation.html"
+                class="btn btn-warning dashboard-btn">
+
+                Donor / Receiver Confirmation
+
+            </a>
+
+            <!-- RECEIVERS -->
+            <a
+                href="ReceiversList"
+                class="btn btn-info dashboard-btn">
+
+                View Recipients
+
+            </a>
+
+            <!-- BACK -->
+            <button
+                type="button"
+                class="btn btn-secondary dashboard-btn"
+                onclick="goBack()">
+
+                Back
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
+
+</body>
+</html>

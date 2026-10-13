@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: aqua;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* About Us heading */
+h2 {
+    color: red;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+/* List */
+ul {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* Center the Back button */
+button {
+    display: block;
+    margin: 35px auto;
+    width: 180px;
+    padding: 12px 20px;
+
+    background-color: white;
+    color: red;
+
+    border: 2px solid red;
+    border-radius: 8px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+}

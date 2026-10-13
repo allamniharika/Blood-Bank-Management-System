@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.nav-item {
+    margin-left: 20px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+.nav-link:hover {
+    color: #007bff;
+}
+.hero {
+    background-color:red;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+.hero .btn {
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+.hero .btn:hover {
+    background-color: #e2e6ea;
+}
+.features {
+    padding: 40px 20px;
+}
+.feature-card {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.feature-card h5 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.feature-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+.feature-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.feature-card .btn:hover {
+    background-color: #0056b3;
+}
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+footer p {
+    margin: 0;
+}

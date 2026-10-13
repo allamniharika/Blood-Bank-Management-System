@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receiver Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="receiver.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="form-container shadow p-4 rounded bg-white">
+            <h2 class="text" align="center">Blood Receiver Registration Form</h2>
+            <form action="Receiver" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName"placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="receiverId">Receiver's ID</label>
+                    <input type="text" class="form-control" id="receiverId" name="ReceiverID"placeholder="Enter your Aadhar Number or Voter ID or Driving License" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="Email"placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="Phone"placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" rows="2" name="Address"placeholder="Enter your address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup">Blood Group Needed</label>
+                    <select class="form-control" id="bloodGroup" name="BloodGroup"required>
+                        <option value="">Select blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="DateOfBirth"required>
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="male" value="male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Gender" id="female" value="female" required>
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="hospital">Hospital Name</label>
+                    <input type="text" class="form-control" id="hospital" name="HospitalName"placeholder="Enter hospital name (if applicable)">
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason for Blood Request</label>
+                    <textarea class="form-control" id="reason" rows="3" name="ReasonForBloodRequest"placeholder="Explain the reason for blood request" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="preferredDate">Preferred Date for Blood Reception</label>
+                    <input type="date" class="form-control" name="PreferredDateForReception"id="preferredDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="allergies">Allergies</label>
+                    <textarea class="form-control" id="allergies" name="Allergies" rows="2" placeholder="Please specify any allergies" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="emergencyContact">Emergency Contact</label>
+                    <input type="tel" class="form-control" id="emergencyContact" name="EmergencyContact"placeholder="Enter emergency contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="prescription">Hospital Prescription (Image or PDF)</label>
+                    <input type="file" class="form-control-file" id="prescription" accept="image/*,application/pdf" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="button" class="btn btn-secondary btn-block" onclick="goBack()">Back</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

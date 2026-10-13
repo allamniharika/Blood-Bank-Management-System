@@ -1,0 +1,19 @@
+body {
+    background-color:red;
+}
+.form-container {
+    width: 100%;
+    max-width: 600px;
+}
+label {
+    font-weight: bold;
+}
+textarea.form-control {
+    resize: none;
+}
+.form-check-input.ml-2 {
+    margin-left: 0 !important;
+}
+.text{
+    color:red;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Registration Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="donar.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="form-container shadow p-4 rounded bg-white">
+            <h2 class="text" align="center">Blood Donar Registration Form</h2>
+            <form action="RegisterDonar" method="POST">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name"placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email"placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone"placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" name="address"rows="2" placeholder="Enter your address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (in kg)</label>
+                    <input type="number" class="form-control" id="weight" name="weight"placeholder="Enter your weight" required>
+                </div>
+                <div class="form-group">
+                    <label for="bloodGroup">Blood Group</label>
+                    <select class="form-control" id="bloodGroup" name="bloodGroup"required>
+                        <option value="">Select your blood group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Age</label>
+                    <input type="text" class="form-control" id="age" name="age"required>
+                </div>
+                <div class="form-group">
+                    <label for="firstTime">First-time Donor-</label>
+                    <input type="checkbox" class="form-check-input ml-2" id="firstTime" onchange="Last()">
+                </div>
+                <div class="form-group">
+                    <label for="Date">Last Donation Date</label>
+                    <input type="date" class="form-control" id="Date" name="date"placeholder="Enter the date of your last donation">
+                </div>
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="diseases">Do you have any diseases?</label>
+                    <textarea class="form-control" id="diseases" name="diseases"rows="3" placeholder="Please specify if any" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="emergencyContact">Emergency Contact</label>
+                    <input type="tel" class="form-control" id="emergencyContact" name="emergencyContact"placeholder="Enter emergency contact number" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="alcoholCheck" required>
+                    <label class="form-check-label" for="alcoholCheck">I have not consumed alcohol within the last 24 hours</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <button type="button" class="btn btn-secondary btn-block">Back</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function Last() {
+            const firstTimeCheckbox = document.getElementById('firstTime');
+            const DateField = document.getElementById('Date');
+            if (firstTimeCheckbox.checked) {
+                DateField.disabled = true;
+                DateField.value = '';
+            } else {
+                DateField.disabled = false;
+            }
+        }
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
