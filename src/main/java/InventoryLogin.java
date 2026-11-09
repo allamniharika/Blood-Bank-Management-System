@@ -1,3 +1,4 @@
+```java
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,11 +18,13 @@ public class InventoryLogin extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private static final String URL =
-           System.getenv("DB_URL");
+            System.getenv("DB_URL");
 
-    private static final String DB_USER = System.getenv("DB_USER");
+    private static final String DB_USER =
+            System.getenv("DB_USER");
 
-    private static final String DB_PASSWORD = "root";
+    private static final String DB_PASSWORD =
+            System.getenv("DB_PASSWORD");
 
     @Override
     protected void doPost(HttpServletRequest request,
@@ -39,8 +42,12 @@ public class InventoryLogin extends HttpServlet {
 
             try (Connection con =
                          DriverManager.getConnection(
-                                 URL, DB_USER, DB_PASSWORD);
-                 PreparedStatement ps = con.prepareStatement(sql)) {
+                                 URL,
+                                 DB_USER,
+                                 DB_PASSWORD);
+
+                 PreparedStatement ps =
+                         con.prepareStatement(sql)) {
 
                 ps.setString(1, username);
                 ps.setString(2, password);
@@ -49,9 +56,18 @@ public class InventoryLogin extends HttpServlet {
 
                     if (rs.next()) {
 
-                        HttpSession session = request.getSession();
-                        session.setAttribute("inventoryLoggedIn", true);
-                        session.setAttribute("username", username);
+                        HttpSession session =
+                                request.getSession();
+
+                        session.setAttribute(
+                                "inventoryLoggedIn",
+                                true
+                        );
+
+                        session.setAttribute(
+                                "username",
+                                username
+                        );
 
                         response.sendRedirect(
                                 "inventory-dashboard.html"
@@ -92,3 +108,4 @@ public class InventoryLogin extends HttpServlet {
         }
     }
 }
+```
